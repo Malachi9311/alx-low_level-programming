@@ -1,17 +1,16 @@
 #include <stdio.h>
 /**
  * main - Entry
- * Return: Always 0 (Success)
+ * Return: Always 0 (Sucess)
  */
 int main(void)
 {
-	int ch;
+	char ch;
 
-	ch = 'a';
-	while (ch <= 'z', ch != 'e', ch != 'q')
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
+		if (ch != 'e' || ch != 'q')
 		putchar(ch);
-		ch++;
 	}
 	putchar('\n');
 	return (0);
