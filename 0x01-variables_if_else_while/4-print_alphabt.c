@@ -7,7 +7,7 @@ int main(void)
 {
 	int ch;
 
-	ch = 'a'
+	ch = 'a';
 	while (ch <= 'z' && ch != 'e' || ch != 'q')
 	{
 		putchar(ch);
