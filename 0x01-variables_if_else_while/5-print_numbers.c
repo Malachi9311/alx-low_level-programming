@@ -3,7 +3,7 @@
  * main - Entry
  * Return: Always 0 (Succes)
  */
-int (void)
+int main(void)
 {
 	int i;
 
