@@ -2,26 +2,28 @@
 #include <stdlib.h>
 
 /**
- * main - entry point
- * @argc: number of arguments
- * @argv: array of pointers to arguments
- * Return: always 0
+ * main - add 2 positive numbers and print the result
+ * @argc: argument count
+ * @argv: argument vector, array of strings
+ * Description: If no number is passed to program, print 0.
+ * If one of the numbers contain non-digits, print Error.
+ * Return: 1 if error, 0 if function runs properly.
  */
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int result = 0;
-	int n;
+	int total, i;
 	char *p;
+	int num;
 
+	total = 0;
 	if (argc > 1)
 	{
-		for (i = 1; i < argv[i]; i++)
+		for (i = 1; argv[i]; i++)
 		{
-			n = strtol(argv[i], &p, 10);
+			num = strtol(argv[i], &p, 10);
 			if (!*p)
-				result += n;
+				total += num;
 			else
 			{
 				printf("Error\n");
@@ -29,6 +31,6 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	printf("%d\n", result);
+	printf("%d\n", total);
 	return (0);
 }
