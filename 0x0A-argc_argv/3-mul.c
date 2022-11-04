@@ -13,9 +13,10 @@ int main(int argc, char *argv[])
 	int i;
 	int result;
 
-	if (argc < 3)
+	if (argc != 3)
 	{
 		printf("%s\n", "Error");
+		return (1);
 	}
 	else
 	{
@@ -23,7 +24,7 @@ int main(int argc, char *argv[])
 		{
 			result *= atoi(argv[i]);
 		}
-		printf("%d\n", result)
+		printf("%d\n", result);
 	}
 	return (0);
 }
